@@ -1,2 +1,2 @@
-# laravel-user-banning
-Simple Laravel package handling user banning
+# laravel-bannable
+Simple Laravel package handling bannable users
