@@ -1,9 +1,9 @@
 <?php
 
-namespace Gecche\UserBannable;
+namespace Gecche\Bannable;
 
-use Gecche\UserBannable\Events\Banned;
-use Gecche\UserBannable\Events\Unbanned;
+use Gecche\Bannable\Events\Banned;
+use Gecche\Bannable\Events\Unbanned;
 
 trait Bannable
 {

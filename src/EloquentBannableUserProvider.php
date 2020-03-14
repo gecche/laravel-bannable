@@ -1,8 +1,8 @@
 <?php
 
-namespace Gecche\UserBannable;
+namespace Gecche\Bannable;
 
-use Gecche\UserBannable\Contract\Bannable as UserContract;
+use Gecche\Bannable\Contract\Bannable as UserContract;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Hashing\Hasher as HasherContract;
@@ -17,7 +17,7 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
      * Retrieve a user by their unique identifier.
      *
      * @param  mixed  $identifier
-     * @return \Gecche\UserBannable\Contract\Bannable|null
+     * @return \Gecche\Bannable\Contract\Bannable|null
      */
     public function retrieveById($identifier)
     {
@@ -34,7 +34,7 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
      *
      * @param  mixed  $identifier
      * @param  string  $token
-     * @return \Gecche\UserBannable\Contract\Bannable|null
+     * @return \Gecche\Bannable\Contract\Bannable|null
      */
     public function retrieveByToken($identifier, $token)
     {
@@ -59,7 +59,7 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
      * Retrieve a user by the given credentials.
      *
      * @param  array  $credentials
-     * @return \Gecche\UserBannable\Contract\Bannable|null
+     * @return \Gecche\Bannable\Contract\Bannable|null
      */
     public function retrieveByCredentials(array $credentials)
     {

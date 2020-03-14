@@ -1,7 +1,7 @@
 {
-    "name": "gecche/laravel-user-banning",
-    "description": "A simple package to handle user banning",
-    "keywords": ["laravel", "user", "banning user"],
+    "name": "gecche/laravel-bannable",
+    "description": "A simple package to handle bannable users",
+    "keywords": ["laravel", "user", "bannable"],
     "license": "MIT",
     "authors": [
         {

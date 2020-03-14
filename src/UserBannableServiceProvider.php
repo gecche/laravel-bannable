@@ -1,11 +1,11 @@
 <?php
 
-namespace Gecche\UserBannable;
+namespace Gecche\Bannable;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
-class UserBannableServiceProvider extends ServiceProvider
+class BannableServiceProvider extends ServiceProvider
 {
 
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Gecche\UserBannable\Contract;
+namespace Gecche\Bannable\Contract;
 
-use Gecche\UserBannable\Banned;
-use Gecche\UserBannable\Unbanned;
+use Gecche\Bannable\Banned;
+use Gecche\Bannable\Unbanned;
 use Illuminate\Contracts\Auth\Authenticatable;
 
 interface Bannable extends Authenticatable

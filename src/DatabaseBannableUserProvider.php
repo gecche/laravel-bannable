@@ -1,6 +1,6 @@
 <?php
 
-namespace Gecche\UserBannable;
+namespace Gecche\Bannable;
 
 use Illuminate\Auth\DatabaseUserProvider;
 

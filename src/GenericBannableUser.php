@@ -1,8 +1,8 @@
 <?php
 
-namespace Gecche\UserBannable;
+namespace Gecche\Bannable;
 
-use Gecche\UserBannable\Contract\Bannable as UserContract;
+use Gecche\Bannable\Contract\Bannable as UserContract;
 use Illuminate\Auth\GenericUser;
 
 class GenericBannableUser extends GenericUser implements UserContract
