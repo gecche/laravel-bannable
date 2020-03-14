@@ -18,6 +18,16 @@ trait Bannable
     }
 
     /**
+     * Get the column name for the "banned" value.
+     *
+     * @return string
+     */
+    public function getBannedName()
+    {
+        return 'banned';
+    }
+
+    /**
      * Mark the given user as banned.
      *
      * @return bool
