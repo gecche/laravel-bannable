@@ -1,10 +1,11 @@
 <?php
 
-namespace Gecche\UserBanning;
+namespace Gecche\UserBannable;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
-class UserBanningServiceProvider extends ServiceProvider
+class UserBannableServiceProvider extends ServiceProvider
 {
 
 
@@ -28,6 +29,13 @@ class UserBanningServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'user-banning');
+
+
+        Auth::extend('jwt', function ($app, $name, array $config) {
+            // Return an instance of Illuminate\Contracts\Auth\Guard...
+
+            return new JwtGuard(Auth::createUserProvider($config['provider']));
+        });
 
     }
 

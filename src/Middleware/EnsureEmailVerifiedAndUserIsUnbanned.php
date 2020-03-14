@@ -1,13 +1,13 @@
 <?php
 
-namespace Gecche\UserBanning\Middleware;
+namespace Gecche\UserBannable\Middleware;
 
 use Closure;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Support\Facades\Redirect;
-use Gecche\UserBanning\Contract\Bannable;
+use Gecche\UserBannable\Contract\Bannable;
 
 class EnsureEmailVerifiedAndUserIsUnbanned
 {

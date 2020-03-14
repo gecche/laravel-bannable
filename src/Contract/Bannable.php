@@ -1,31 +1,26 @@
 <?php
 
-namespace Gecche\UserBanning\Contract;
+namespace Gecche\UserBannable\Contract;
 
-use Gecche\UserBanning\Banned;
-use Gecche\UserBanning\Unbanned;
+use Gecche\UserBannable\Banned;
+use Gecche\UserBannable\Unbanned;
+use Illuminate\Contracts\Auth\Authenticatable;
 
-interface Bannable
+interface Bannable extends Authenticatable
 {
     /**
-     * Determine if the user has verified their email address.
+     * Get the column name for the "banned" value.
+     *
+     * @return string
+     */
+    public function getBannedName();
+
+    /**
+     * Determine if the user is banned.
      *
      * @return bool
      */
     public function isBanned();
 
-    /**
-     * Mark the given user as banned.
-     *
-     * @return bool
-     */
-    public function ban();
-
-    /**
-     * Mark the given user as unbanned.
-     *
-     * @return bool
-     */
-    public function unBan();
 
 }

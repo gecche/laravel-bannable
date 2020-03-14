@@ -1,6 +1,6 @@
 <?php
 
-namespace Gecche\UserBanning;
+namespace Gecche\UserBannable\Events;
 
 use Illuminate\Queue\SerializesModels;
 

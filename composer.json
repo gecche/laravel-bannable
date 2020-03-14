@@ -24,7 +24,7 @@
 
         ],
         "psr-4": {
-            "Gecche\\UserBanning\\": "src"
+            "Gecche\\UserBannable\\": "src"
         },
         "files": [
 
@@ -32,7 +32,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Gecche\\UserBanning\\Tests\\": "tests/src"
+            "Gecche\\UserBannable\\Tests\\": "tests/src"
         }
     },
     "scripts": {
@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gecche\\UserBanning\\UserBanningServiceProvider"
+                "Gecche\\UserBannable\\UserBannableServiceProvider"
             ]
         }
     }
