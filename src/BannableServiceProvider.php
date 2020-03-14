@@ -28,7 +28,6 @@ class BannableServiceProvider extends ServiceProvider
     {
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'user-banning');
 
         Auth::provider('eloquent-bannable', function ($app, array $config) {
             // Return an instance of Illuminate\Contracts\Auth\UserProvider...
