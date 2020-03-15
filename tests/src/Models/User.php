@@ -1,7 +1,7 @@
 <?php namespace Gecche\Bannable\Tests\Models;
 
 use Gecche\Bannable\Bannable;
-use Gecche\Bannable\Contract\Bannable as BannableContract;
+use Gecche\Bannable\Contracts\Bannable as BannableContract;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Auth\Passwords\CanResetPassword;

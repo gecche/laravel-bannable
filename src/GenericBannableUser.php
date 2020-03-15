@@ -2,7 +2,7 @@
 
 namespace Gecche\Bannable;
 
-use Gecche\Bannable\Contract\Bannable as UserContract;
+use Gecche\Bannable\Contracts\Bannable as UserContract;
 use Illuminate\Auth\GenericUser;
 
 class GenericBannableUser extends GenericUser implements UserContract

@@ -3,6 +3,7 @@
 namespace Gecche\Bannable;
 
 use Illuminate\Auth\DatabaseUserProvider;
+use Gecche\Bannable\Contracts\Bannable;
 
 class DatabaseBannableUserProvider extends DatabaseUserProvider
 {
@@ -20,5 +21,6 @@ class DatabaseBannableUserProvider extends DatabaseUserProvider
             return $genericUser->isBanned() ? null : $genericUser;
         }
     }
+
 
 }

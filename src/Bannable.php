@@ -46,7 +46,7 @@ trait Bannable
      *
      * @return bool
      */
-    public function unBan()
+    public function unban()
     {
         $saved = $this->saveBannedStatus(0);
         if ($saved) {

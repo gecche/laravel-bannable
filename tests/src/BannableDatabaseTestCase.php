@@ -14,11 +14,12 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class BannableEloquentTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
+class BannableDatabaseTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
 {
 
     use RefreshDatabase;
     use BannableTestCaseTrait;
+
 
     /**
      * Setup the test environment.
@@ -64,8 +65,8 @@ class BannableEloquentTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
         ]);
         $app['config']->set('auth.providers', [
             'users' => [
-                'driver' => 'eloquent-bannable',
-                'model' => User::class,
+                'driver' => 'database-bannable',
+                'table' => 'users',
             ]
         ]);
     }
@@ -84,45 +85,27 @@ class BannableEloquentTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
     }
 
 
-    /*
-     * Test bannable User methods ban and Unban
-     */
-    public function testBanAndUnbanEloquentUser()
-    {
-        $dbUser = DB::table('users')->find(1);
-
-        //By default the banned value is 0 once seeded.
-        $this->assertEquals($dbUser->banned, 0);
-
-        $user = $this->getTestUser();
-
-        $user->ban();
-        //
-        $dbUser = DB::table('users')->find(1);
-        //By default the banned value is 0 once seeded.
-        $this->assertEquals($dbUser->banned, 1);
-
-        $user->unban();
-        //
-        $dbUser = DB::table('users')->find(1);
-        //By default the banned value is 0 once seeded.
-        $this->assertEquals($dbUser->banned, 0);
-
-    }
-
-    
-    
     protected function getTestUser() {
-        return User::find(1);
-    }
 
+        Auth::loginUsingId(1);
+        $user = Auth::user();
+        Auth::logout();
+        return $user;
+
+    }
 
     protected function ban($user) {
-        $user->ban();
+        return $this->updateBannedName($user,1);
     }
 
     protected function unban($user) {
-        $user->unban();
+        return $this->updateBannedName($user,0);
     }
 
+
+    protected function updateBannedName($user,$value) {
+        DB::table('users')
+            ->where('email',$user->email)
+            ->update([$user->getBannedName() => $value]);
+    }
 }
