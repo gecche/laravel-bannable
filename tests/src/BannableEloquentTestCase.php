@@ -14,7 +14,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class BannableTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
+class BannableEloquentTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
 {
 
     use RefreshDatabase;

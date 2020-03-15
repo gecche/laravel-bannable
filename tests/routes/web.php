@@ -29,3 +29,4 @@ Route::middleware(['web'])->group(function() {
     Route::post('/logout', '\Gecche\Bannable\Http\Controllers\Auth\LoginController@logout')->name('logout');
 });
 
+
