@@ -119,7 +119,7 @@ trait BannableTestCaseTrait
 
 
         $this->assertResponseStatus( 200 );
-        $this->assertStringContainsString($response->getContent(),$user->name);
+        $this->assertContains($response->getContent(),$user->name);
 
 
     }

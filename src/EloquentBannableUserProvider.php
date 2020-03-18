@@ -74,13 +74,7 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
         $query = $this->createModel()->newQuery();
 
         foreach ($credentials as $key => $value) {
-            if (Str::contains($key, 'password')) {
-                continue;
-            }
-
-            if (is_array($value) || $value instanceof Arrayable) {
-                $query->whereIn($key, $value);
-            } else {
+            if (! Str::contains($key, 'password')) {
                 $query->where($key, $value);
             }
         }
