@@ -23,7 +23,7 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
     {
         $model = $this->createModel();
 
-        return $this->newModelQuery($model)
+        return $model->newQuery()
                     ->where($model->getAuthIdentifierName(), $identifier)
                     ->where($model->getBannedName(), 0)
                     ->first();
@@ -40,19 +40,18 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
     {
         $model = $this->createModel();
 
-        $retrievedModel = $this->newModelQuery($model)
+        $model = $model
             ->where($model->getAuthIdentifierName(), $identifier)
             ->where($model->getBannedName(), 0)
             ->first();
 
-        if (! $retrievedModel) {
-            return;
+        if (! $model) {
+            return null;
         }
 
-        $rememberToken = $retrievedModel->getRememberToken();
+        $rememberToken = $model->getRememberToken();
 
-        return $rememberToken && hash_equals($rememberToken, $token)
-                        ? $retrievedModel : null;
+        return $rememberToken && hash_equals($rememberToken, $token) ? $model : null;
     }
 
     /**
@@ -65,14 +64,14 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
     {
         if (empty($credentials) ||
            (count($credentials) === 1 &&
-            Str::contains($this->firstCredentialKey($credentials), 'password'))) {
+               array_key_exists('password', $credentials))) {
             return;
         }
 
         // First we will add each credential element to the query as a where clause.
         // Then we can execute the query and, if we found a user, return it in a
         // Eloquent User "model" that will be utilized by the Guard instances.
-        $query = $this->newModelQuery();
+        $query = $this->createModel()->newQuery();
 
         foreach ($credentials as $key => $value) {
             if (Str::contains($key, 'password')) {
