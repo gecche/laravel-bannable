@@ -3,10 +3,7 @@
 use Gecche\Bannable\Bannable;
 use Gecche\Bannable\Contracts\Bannable as BannableContract;
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
-use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -17,11 +14,9 @@ use Illuminate\Notifications\Notifiable;
 class User extends Model implements
     AuthenticatableContract,
     AuthorizableContract,
-    CanResetPasswordContract,
-    MustVerifyEmailContract,
     BannableContract
 {
-    use Authenticatable, Authorizable, CanResetPassword, MustVerifyEmail;
+    use Authenticatable, Authorizable, CanResetPassword;
     use Bannable;
     use Notifiable;
 
@@ -43,13 +38,5 @@ class User extends Model implements
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 }
 
