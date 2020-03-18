@@ -129,7 +129,7 @@ trait BannableTestCaseTrait
         $this->ban($user);
         $this->call('GET', '/api/userbasic', [], [], [],
             ['PHP_AUTH_USER' => $user->email, 'PHP_AUTH_PW' => 'password']);
-        
+
         $this->assertResponseStatus( 401 );
 
 
