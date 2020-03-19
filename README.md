@@ -1,4 +1,6 @@
+[![Laravel](https://img.shields.io/badge/Laravel-5.x-orange.svg?style=flat-square)](http://laravel.com)
 [![Laravel](https://img.shields.io/badge/Laravel-6.x-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-7.x-orange.svg?style=flat-square)](http://laravel.com)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
 # laravel-bannable
@@ -9,7 +11,7 @@ Laravel package to handle bannable users
   rules or for not respecting other users or simply for not paying the monthly fees :)
   
   This package adds a `banned` attribute to the standard users in order to prevent the authentication of such 
-  banned users.  
+  banned users. Fully tested.
 
 ## Documentation
 
@@ -17,6 +19,10 @@ Laravel package to handle bannable users
 
  Laravel  | Bannable
 :---------|:----------
+ 5.5.x    | 1.1.x
+ 5.6.x    | 1.2.x
+ 5.7.x    | 1.3.x
+ 5.8.x    | 1.4.x
  6.x      | 2.x
  7.x      | 3.x
 
@@ -27,7 +33,7 @@ Add gecche/laravel-bannable as a requirement to composer.json:
 ```javascript
 {
     "require": {
-        "gecche/laravel-bannable": "2.*"
+        "gecche/laravel-bannable": "1.4.*"
     }
 }
 ```
