@@ -1,6 +1,6 @@
 <?php
 
-namespace Gecche\Bannable\Http\Controllers;
+namespace Gecche\Bannable\Tests\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Gecche\Bannable\Http\Controllers\Auth;
+namespace Gecche\Bannable\Tests\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Gecche\Bannable\Tests\Http\Controllers\Controller;
+use Gecche\Bannable\Tests\RouteServiceProvider;
+use Gecche\Bannable\Tests\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
