@@ -33,7 +33,7 @@ Add gecche/laravel-bannable as a requirement to composer.json:
 ```javascript
 {
     "require": {
-        "gecche/laravel-bannable": "2.*"
+        "gecche/laravel-bannable": "3.*"
     }
 }
 ```
