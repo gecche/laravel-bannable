@@ -42,8 +42,14 @@ This package makes use of the discovery feature.
 
 ### Basic usage
 
-To use the package's features, first you have to run the provided migration which simply adds a `banned` boolean field to the
+To use the package's features, first you have to publish and to run the provided migration which simply adds a `banned` boolean field to the
  users' table.
+
+Then, if you use Eloquent users you have to add the bannable features to the User model class:
+
+```php
+php artisan vendor:publish --provider="Gecche\Bannable\BannableServiceProvider"
+```
  
 Then, if you use Eloquent users you have to add the bannable features to the User model class:
 
