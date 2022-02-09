@@ -68,6 +68,17 @@ class BannableEloquentTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
                 'model' => User::class,
             ]
         ]);
+        $app['config']->set('auth.guards', [
+            'web' => [
+                'driver' => 'session',
+                'provider' => 'users',
+            ],
+            'api' => [
+                'driver' => 'token',
+                'provider' => 'users',
+                'hash' => false,
+            ],
+        ]);
     }
 
     /**
