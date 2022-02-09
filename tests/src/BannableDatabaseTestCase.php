@@ -69,6 +69,17 @@ class BannableDatabaseTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
                 'table' => 'users',
             ]
         ]);
+        $app['config']->set('auth.guards', [
+            'web' => [
+                'driver' => 'session',
+                'provider' => 'users',
+            ],
+            'api' => [
+                'driver' => 'token',
+                'provider' => 'users',
+                'hash' => false,
+            ],
+        ]);
     }
 
     /**
