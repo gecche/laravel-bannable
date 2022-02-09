@@ -26,6 +26,7 @@ Laravel package to handle bannable users
  6.x      | 2.x
  7.x      | 3.x
  8.x      | 4.x
+ 9.x      | 5.x
 
 ### Installation
 
@@ -34,7 +35,7 @@ Add gecche/laravel-bannable as a requirement to composer.json:
 ```javascript
 {
     "require": {
-        "gecche/laravel-bannable": "4.*"
+        "gecche/laravel-bannable": "5.*"
     }
 }
 ```
