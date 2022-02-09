@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## 5.0 - 2022-02-09
+### Changed
+- `composer.json` updated for Laravel 9.x
+
 ## 4.0 - 2022-02-09
 ### Changed
 - Test configuration updated for testbench-core 6.x
@@ -35,7 +39,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 - Initial version for Laravel 5.5.
 
-[Unreleased]: https://github.com/gecche/laravel-bannable/compare/v4.0...HEAD
+[Unreleased]: https://github.com/gecche/laravel-bannable/compare/v5.0...HEAD
+[5.0]: https://github.com/gecche/laravel-bannable/compare/v4.0...v5.0
 [4.0]: https://github.com/gecche/laravel-bannable/compare/v3.0...v4.0
 [3.0]: https://github.com/gecche/laravel-bannable/compare/v2.0...v3.0
 [2.0]: https://github.com/gecche/laravel-bannable/compare/v1.4.0...v2.0
