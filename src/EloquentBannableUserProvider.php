@@ -63,9 +63,13 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
      */
     public function retrieveByCredentials(array $credentials)
     {
-        if (empty($credentials) ||
-           (count($credentials) === 1 &&
-            Str::contains($this->firstCredentialKey($credentials), 'password'))) {
+        $credentials = array_filter(
+            $credentials,
+            fn ($key) => ! str_contains($key, 'password'),
+            ARRAY_FILTER_USE_KEY
+        );
+
+        if (empty($credentials)) {
             return;
         }
 
@@ -75,12 +79,10 @@ class EloquentBannableUserProvider extends EloquentUserProvider implements UserP
         $query = $this->newModelQuery();
 
         foreach ($credentials as $key => $value) {
-            if (Str::contains($key, 'password')) {
-                continue;
-            }
-
             if (is_array($value) || $value instanceof Arrayable) {
                 $query->whereIn($key, $value);
+            } elseif ($value instanceof Closure) {
+                $value($query);
             } else {
                 $query->where($key, $value);
             }
