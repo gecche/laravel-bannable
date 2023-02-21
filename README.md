@@ -1,7 +1,10 @@
-[![Laravel](https://img.shields.io/badge/Laravel-5.x-orange.svg?style=flat-square)](http://laravel.com)
-[![Laravel](https://img.shields.io/badge/Laravel-6.x-orange.svg?style=flat-square)](http://laravel.com)
-[![Laravel](https://img.shields.io/badge/Laravel-7.x-orange.svg?style=flat-square)](http://laravel.com)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
+[![Laravel](https://img.shields.io/badge/Laravel-10.x-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-9.x-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-8.x-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-7.x-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-6.x-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-5.x-orange.svg?style=flat-square)](http://laravel.com)
 
 # laravel-bannable
 Laravel package to handle bannable users
@@ -27,6 +30,7 @@ Laravel package to handle bannable users
  7.x      | 3.x
  8.x      | 4.x
  9.x      | 5.x
+ 10.x     | 10.x
 
 ### Installation
 
@@ -35,7 +39,7 @@ Add gecche/laravel-bannable as a requirement to composer.json:
 ```javascript
 {
     "require": {
-        "gecche/laravel-bannable": "5.*"
+        "gecche/laravel-bannable": "10.*"
     }
 }
 ```
@@ -108,7 +112,7 @@ replacing the `banned` name with whatever name you want:
 
 Remember to change the name of the database field too!
 
-#### Ban and unban users
+#### Ban and Unban users
 
 The `Gecche\Bannable\Bannable` trait also provides two simple methods, namely 
 `ban` and `unban` which obviously ban and unban the user. Both methods also fire 
