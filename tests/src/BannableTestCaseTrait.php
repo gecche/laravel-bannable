@@ -50,7 +50,7 @@ trait BannableTestCaseTrait
         $this->assertEquals(Auth::id(), null);
 
         $this->visit('/')
-            ->see(env("APP_NAME"));
+            ->see((string) env("APP_NAME"));
 
         $this->visit('/login')
             ->type($user->email,'email')
@@ -69,7 +69,7 @@ trait BannableTestCaseTrait
         $this->assertEquals(Auth::id(), null);
 
         $this->visit('/')
-            ->see(env("APP_NAME"));
+            ->see((string) env("APP_NAME"));
 
         $this->ban($user);
 
