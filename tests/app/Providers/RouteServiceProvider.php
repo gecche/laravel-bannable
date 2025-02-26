@@ -1,6 +1,6 @@
 <?php
 
-namespace Gecche\Bannable\Tests;
+namespace Gecche\Bannable\Tests\App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Gecche\Bannable\Tests\Http\Controllers';
+    protected $namespace = 'Gecche\Bannable\Tests\App\Http\Controllers';
 
     /**
      * The path to the "home" route for your application.

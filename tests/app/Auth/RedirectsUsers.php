@@ -1,6 +1,6 @@
 <?php
 
-namespace Gecche\Bannable\Tests\Auth;
+namespace Gecche\Bannable\Tests\App\Auth;
 
 trait RedirectsUsers
 {
