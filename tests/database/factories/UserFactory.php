@@ -14,7 +14,7 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Gecche\Bannable\Tests\Models\User::class, function (Faker $faker) {
+$factory->define(Gecche\Bannable\Tests\App\Models\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,

@@ -1,4 +1,4 @@
-<?php namespace Gecche\Bannable\Tests\Models;
+<?php namespace Gecche\Bannable\Tests\App\Models;
 
 use Gecche\Bannable\Bannable;
 use Gecche\Bannable\Contracts\Bannable as BannableContract;

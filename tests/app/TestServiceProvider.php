@@ -1,4 +1,4 @@
-<?php namespace Gecche\Bannable\Tests;
+<?php namespace Gecche\Bannable\Tests\App;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

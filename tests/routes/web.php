@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::namespace("\\Gecche\\Bannable\\Tests\\Http\\Controllers")->group(function () {
+Route::namespace("\\Gecche\\Bannable\\Tests\\App\\Http\\Controllers")->group(function () {
 
     Route::get('/home', 'HomeController@index')->name('home');
 });
@@ -24,9 +24,9 @@ Route::namespace("\\Gecche\\Bannable\\Tests\\Http\\Controllers")->group(function
 Route::middleware(['web'])->group(function() {
 
     // Authentication Routes...
-    Route::get('/login', '\Gecche\Bannable\Tests\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
-    Route::post('/login', '\Gecche\Bannable\Tests\Http\Controllers\Auth\LoginController@login');
-    Route::post('/logout', '\Gecche\Bannable\Tests\Http\Controllers\Auth\LoginController@logout')->name('logout');
+    Route::get('/login', '\Gecche\Bannable\Tests\App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
+    Route::post('/login', '\Gecche\Bannable\Tests\App\Http\Controllers\Auth\LoginController@login');
+    Route::post('/logout', '\Gecche\Bannable\Tests\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 });
 
 

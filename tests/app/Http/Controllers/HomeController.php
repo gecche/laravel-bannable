@@ -1,6 +1,6 @@
 <?php
 
-namespace Gecche\Bannable\Tests\Http\Controllers;
+namespace Gecche\Bannable\Tests\App\Http\Controllers;
 
 use Illuminate\Http\Request;
 

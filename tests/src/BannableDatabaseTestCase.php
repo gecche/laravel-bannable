@@ -8,11 +8,12 @@
 
 namespace Gecche\Bannable\Tests;
 
-use Gecche\Bannable\Tests\Models\User;
+use Gecche\Bannable\Tests\App\Models\User;
 use Gecche\Bannable\BannableServiceProvider as ServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Gecche\Bannable\Tests\App\TestServiceProvider;
 
 class BannableDatabaseTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
 {

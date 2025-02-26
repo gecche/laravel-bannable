@@ -1,6 +1,6 @@
 <?php
 
-namespace Gecche\Bannable\Tests\Auth;
+namespace Gecche\Bannable\Tests\App\Auth;
 
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Cache\RateLimiter;
