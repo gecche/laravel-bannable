@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## 13.0 - 2025-03-29
+### Changed
+- `composer.json` updated for Laravel 13
+
 ## 12.0 - 2025-02-26
 ### Changed
 - `composer.json` updated for Laravel 12
@@ -51,7 +55,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 - Initial version for Laravel 5.5.
 
-[Unreleased]: https://github.com/gecche/laravel-bannable/compare/v12.0...HEAD
+[Unreleased]: https://github.com/gecche/laravel-bannable/compare/v13.0...HEAD
+[13.0]: https://github.com/gecche/laravel-bannable/compare/v12.0...v13.0
 [12.0]: https://github.com/gecche/laravel-bannable/compare/v11.0...v12.0
 [11.0]: https://github.com/gecche/laravel-bannable/compare/v10.0...v11.0
 [10.0]: https://github.com/gecche/laravel-bannable/compare/v5.0...v10.0
