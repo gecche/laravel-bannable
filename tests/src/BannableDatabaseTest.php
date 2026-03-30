@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Gecche\Bannable\Tests\App\TestServiceProvider;
 
-class BannableDatabaseTestCase extends \Orchestra\Testbench\BrowserKit\TestCase
+class BannableDatabaseTest extends \Orchestra\Testbench\BrowserKit\TestCase
 {
 
     use RefreshDatabase;
